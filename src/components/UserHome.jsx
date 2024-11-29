@@ -23,7 +23,8 @@ function UserHome({ user, iduser }) {
 
     const fetchVideos = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/v1/signos/videos/${iduser}`);
+            /*const response = await axios.get(`http://localhost:4000/v1/signos/videos/${iduser}`);*/
+            const response = await axios.get(`https://free-backend-sandy.vercel.app/v1/signos/videos/${iduser}`);
             setVideos(response.data);
         } catch (error) {
             console.error('Error al cargar los videos:', error);
@@ -57,7 +58,7 @@ function UserHome({ user, iduser }) {
 
         try {
             setUploading(true);
-            const response = await axios.post(`http://localhost:4000/v1/signos/upload/${iduser}`, formData, {
+            const response = await axios.post(`https://free-backend-sandy.vercel.app/v1/signos/upload/${iduser}`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 

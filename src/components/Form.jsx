@@ -15,7 +15,7 @@ function Form({ callback, setiduser }) {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:4000/v1/signos/login', {
+      const res = await fetch('https://free-backend-sandy.vercel.app/v1/signos/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
