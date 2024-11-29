@@ -1,0 +1,349 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.user-home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del encabezado */
+.app-header {
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ef4444;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Estilos de la sección de subida */
+.upload-section {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #374151;
+    color: #ffffff;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.file-input-label:hover {
+    background-color: #4b5563;
+}
+
+.file-input {
+    display: none;
+}
+
+.form-input {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #374151;
+    background-color: #374151;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: #374151;
+    text-align: center;
+}
+
+/* Estilos de la sección de videos */
+.videos-section {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.videos-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.video-item {
+    background-color: #374151;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-title {
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 0.875rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-videos {
+    text-align: center;
+    color: #9ca3af;
+    padding: 2rem;
+    background-color: #374151;
+    border-radius: 0.5rem;
+}
+
+/* Estilos de los botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #dc2626;
+}
+
+.btn-primary:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: #9ca3af;
+}
+
+.btn-ghost:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .upload-section,
+    .videos-section {
+        padding: 1rem;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .app-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-form {
+        gap: 0.5rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+
+/*General Styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+input[type="file"],
+input[type="text"],
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+@media (min-width: 600px) {
+    input[type="file"],
+    input[type="text"],
+    button {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .video-list {
+        justify-content: flex-start;
+    }
+
+    .video-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    input[type="file"],
+    input[type="text"],
+    button {
+        width: 50%;
+    }
+
+    .video-item {
+        width: calc(33.33% - 20px);
+    }
+}*/
